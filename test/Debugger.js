@@ -1,5 +1,6 @@
 const { expect } = require('./Common');
 const Debugger = require('../lib/Debugger');
+const { unknownDebuggerName } = require('../lib/config');
 const { set, reset, restrictedColors, colors } = require('../lib/font');
 const initialDebugEnv = process.env.DEBUG;
 
@@ -23,13 +24,13 @@ describe('#debug Debugger', function() {
       expect(myDebugger2.color).to.be.a('string');
     });
 
-    it('should throw an error when creating a debugger if the name is not a string', function() {
-      expect(() => new Debugger(10)).to.throw;
-      expect(() => new Debugger(true)).to.throw;
-      expect(() => new Debugger([])).to.throw;
-      expect(() => new Debugger(null)).to.throw;
-      expect(() => new Debugger(undefined)).to.throw;
-      expect(() => new Debugger(NaN)).to.throw;
+    it('should create an unknown debugger when creating a debugger if the name is not a string', function() {
+      expect(new Debugger(10).name).to.be.a('string').and.to.equal(unknownDebuggerName);
+      expect(new Debugger(true).name).to.be.a('string').and.to.equal(unknownDebuggerName);
+      expect(new Debugger([]).name).to.be.a('string').and.to.equal(unknownDebuggerName);
+      expect(new Debugger(null).name).to.be.a('string').and.to.equal(unknownDebuggerName);
+      expect(new Debugger(undefined).name).to.be.a('string').and.to.equal(unknownDebuggerName);
+      expect(new Debugger(NaN).name).to.be.a('string').and.to.equal(unknownDebuggerName);
     });
   });
 
@@ -40,14 +41,27 @@ describe('#debug Debugger', function() {
       expect(myDebugger.name).to.be.a('string').and.to.equal('new-name');
     });
 
-    it('should throw an error when setting non-string name', function() {
+    it('should create an unknown debugger when setting non-string name', function() {
       const myDebugger = new Debugger('my-debugger', 'red');
-      expect(() => myDebugger.setName(10)).to.throw;
-      expect(() => myDebugger.setName(true)).to.throw;
-      expect(() => myDebugger.setName([])).to.throw;
-      expect(() => myDebugger.setName(null)).to.throw;
-      expect(() => myDebugger.setName(undefined)).to.throw;
-      expect(() => myDebugger.setName(NaN)).to.throw;
+      expect(myDebugger.name).to.be.a('string').and.to.equal('my-debugger');
+
+      myDebugger.setName(10);
+      expect(myDebugger.name).to.be.a('string').and.to.equal(unknownDebuggerName);
+
+      myDebugger.setName(true);
+      expect(myDebugger.name).to.be.a('string').and.to.equal(unknownDebuggerName);
+
+      myDebugger.setName([]);
+      expect(myDebugger.name).to.be.a('string').and.to.equal(unknownDebuggerName);
+
+      myDebugger.setName(null);
+      expect(myDebugger.name).to.be.a('string').and.to.equal(unknownDebuggerName);
+
+      myDebugger.setName(undefined);
+      expect(myDebugger.name).to.be.a('string').and.to.equal(unknownDebuggerName);
+
+      myDebugger.setName(NaN);
+      expect(myDebugger.name).to.be.a('string').and.to.equal(unknownDebuggerName);
     });
   });
 

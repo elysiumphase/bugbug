@@ -1,6 +1,6 @@
 {
   "name": "bugbug",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight, zero-dependencies, asynchronous and fully-tested pure Node.js debugger",
   "author": "Adrien Valcke <adrienvalcke@icloud.com> (https://github.com/adrienv1520)",
   "main": "lib/index.js",
