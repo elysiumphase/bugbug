@@ -1,9 +1,10 @@
 const { expect } = require('./Common');
 const getDebugger = require('../lib/index');
 const Debugger = require('../lib/Debugger');
+const { mainDebuggerName } = require('../lib/config');
 const { colors } = require('../lib/font');
 
-const { mainDebuggerName, debuggers } = getDebugger;
+const { debuggers } = getDebugger;
 
 describe('#debug index', function() {
   context('when requiring the debug module', function() {
