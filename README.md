@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="doc/bugbug.png" title="bugbug" alt="bugbug"/>
+  <img src="docs/bugbug.png" title="bugbug" alt="bugbug"/>
 <p>
 
 <p align="center">
@@ -21,8 +21,11 @@
     - [Examples](#examples)
   - [Environment variable](#environment-variable)
     - [Examples](#examples-1)
-- [Development](#development)
-- [Licence](#licence)
+- [Code of Conduct](#code-of-conduct)
+- [Contributing](#contributing)
+- [Support](#support)
+- [Security](#security)
+- [License](#license)
 
 # Presentation
 
@@ -103,7 +106,7 @@ const debug = require('bugbug')('my-module', 'red');
 
 ### Examples
 
-You can find examples here: [doc/examples](doc/examples)
+You can find examples here: [docs/examples](docs/examples)
 
 #### Example 1
 ```javascript
@@ -113,7 +116,7 @@ debug('debugging');
 debug('still debugging');
 ```
 
-![Example 1](doc/examples/example1/example1.png "Example 1")
+![Example 1](docs/examples/example1/example1.png "Example 1")
 
 #### Example 2
 ```javascript
@@ -131,7 +134,7 @@ debug('sparkline generated in SVG format,', 'additional stuff');
 debug('options:', options);
 ```
 
-![Example 2](doc/examples/example2/example2.png "Example 2")
+![Example 2](docs/examples/example2/example2.png "Example 2")
 
 #### Example 3
 ```javascript
@@ -148,7 +151,7 @@ debug('in red color if terminal allows it');
 debug('options:', options);
 ```
 
-![Example 3](doc/examples/example3/example3.png "Example 3")
+![Example 3](docs/examples/example3/example3.png "Example 3")
 
 ## Environment variable
 
@@ -161,40 +164,37 @@ debug('options:', options);
 ### Examples
 
 #### DEBUG=*
-![Example 4-1](doc/examples/example4/example4-1.png "Example 4-1")
+![Example 4-1](docs/examples/example4/example4-1.png "Example 4-1")
 
 #### DEBUG=gzip
-![Example 4-2](doc/examples/example4/example4-2.png "Example 4-2")
+![Example 4-2](docs/examples/example4/example4-2.png "Example 4-2")
 
 #### DEBUG=gzip:compression
-![Example 4-3](doc/examples/example4/example4-3.png "Example 4-3")
+![Example 4-3](docs/examples/example4/example4-3.png "Example 4-3")
 
 #### DEBUG=-gzip:compression
-![Example 4-4](doc/examples/example4/example4-4.png "Example 4-4")
+![Example 4-4](docs/examples/example4/example4-4.png "Example 4-4")
 
 #### DEBUG=gzip:*,-gzip:compression
-![Example 4-5](doc/examples/example4/example4-5.png "Example 4-5")
+![Example 4-5](docs/examples/example4/example4-5.png "Example 4-5")
 
 #### DEBUG=*,-gzip:compression
-![Example 4-6](doc/examples/example4/example4-6.png "Example 4-6")
+![Example 4-6](docs/examples/example4/example4-6.png "Example 4-6")
 
 #### DEBUG=\*,-gzip:*
-![Example 4-7](doc/examples/example4/example4-7.png "Example 4-7")
+![Example 4-7](docs/examples/example4/example4-7.png "Example 4-7")
 
-# Development
+# Code of Conduct
+This project has a [Code of Conduct](.github/CODE_OF_CONDUCT.md). By interacting with this repository, organization, or community you agree to abide by its terms.
 
-All contributions are greatly welcome :)
+# Contributing
+Please take a moment to read our [Contributing Guidelines](.github/CONTRIBUTING.md) if you haven't yet done so.
 
-Please follow Git flow, ES6/7, ESLint Airbnb base rules.
+# Support
+Please see our [Support](.github/SUPPORT.md) page if you have any questions or for any help needed.
 
-# Licence
+# Security
+For any security concerns or issues, please visit our [Security Policy](.github/SECURITY.md) page.
 
-*bugbug* is released under the MIT license.
-
-Copyright (C) 2020 Adrien Valcke
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+# License
+[MIT](LICENSE.md).
