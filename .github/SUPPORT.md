@@ -14,7 +14,7 @@ see our [Contributing Guidelines](CONTRIBUTING.md).
 
 If you've found a bug in a [supported version](#supported-versions)
 of bugbug, please report it with the
-[issue tracker](https://github.com/adrienv1520/bugbug/issues).
+[issue tracker](https://github.com/elysiumphase/bugbug/issues).
 
 ## Supported Versions
 The latest *stable* major version is currently supported by the team.

@@ -1,4 +1,4 @@
-const getDebugger = require('../../../lib');
+const getDebugger = require('../../../src');
 
 const debugHttp = getDebugger('http', 'green');
 const debugGzip = getDebugger('gzip', 'lightMagenta');

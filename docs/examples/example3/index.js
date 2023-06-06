@@ -1,4 +1,4 @@
-const debug = require('../../../lib')();
+const debug = require('../../../src')();
 
 const options = {
   values: [1, 2, 3, 4, 5],

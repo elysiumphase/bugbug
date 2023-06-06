@@ -1,8 +1,8 @@
 const { expect } = require('./Common');
-const getDebugger = require('../lib/index');
-const Debugger = require('../lib/Debugger');
-const { mainDebuggerName } = require('../lib/config');
-const { colors } = require('../lib/font');
+const getDebugger = require('../src/index');
+const Debugger = require('../src/Debugger');
+const { mainDebuggerName } = require('../src/config');
+const { colors } = require('../src/font');
 
 const { debuggers } = getDebugger;
 

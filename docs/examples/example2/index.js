@@ -1,4 +1,4 @@
-const debug = require('../../../lib')('node-sparkline', 'green');
+const debug = require('../../../src')('node-sparkline', 'green');
 
 const options = {
   values: [1, 2, 3, 4, 5],

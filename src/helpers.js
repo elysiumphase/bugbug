@@ -1,6 +1,6 @@
 /**
  * From Consis object helper library:
- * https://github.com/adrienv1520/consis/blob/master/lib/object.js
+ * https://github.com/elysiumphase/consis/blob/master/src/object.js
  *
  * Exports :
  *   - exists(thing) -> Boolean

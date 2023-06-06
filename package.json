@@ -1,9 +1,9 @@
 {
   "name": "bugbug",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A lightweight, zero-dependencies, asynchronous and fully-tested pure Node.js debugger",
-  "author": "Adrien Valcke <adrienvalcke@icloud.com> (https://github.com/adrienv1520)",
-  "main": "lib/index.js",
+  "author": "Elysium Phase <hi@elysiumphase.com> (https://github.com/elysiumphase)",
+  "main": "src/index.js",
   "private": false,
   "preferGlobal": false,
   "analyze": false,
@@ -13,13 +13,12 @@
     "npm": ">=5.6.0"
   },
   "scripts": {
-    "test:lint": "eslint lib/",
-    "test:unit": "NODE_ENV=test mocha test/* --exit",
-    "test": "npm run test:lint && npm run test:unit"
+    "lint": "eslint src/",
+    "test": "NODE_ENV=test mocha test/* --exit"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adrienv1520/bugbug.git"
+    "url": "https://github.com/elysiumphase/bugbug.git"
   },
   "keywords": [
     "node.js",
@@ -34,14 +33,13 @@
     "bugbug"
   ],
   "files": [
-    "lib"
+    "src"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "chai": "~4.2.0",
-    "eslint": "~5.12.1",
-    "eslint-config-airbnb-base": "~13.1.0",
-    "eslint-plugin-import": "~2.15.0",
-    "mocha": "~7.1.1"
+    "chai": "4.3.7",
+    "eslint": "8.42.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "mocha": "10.2.0"
   }
 }
